@@ -46,7 +46,7 @@ struct ContentView: View {
 			}
 			.padding()
 			.blur(radius: isCovered == true ? 10.0 : 0)
-			.onChange(of: scenePhase) { oldPhase, newPhase in
+			.onChange(of: scenePhase) { newPhase in
 				if newPhase == .active {
 					isCovered = false
 				} else if newPhase == .inactive {
